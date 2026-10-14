@@ -204,13 +204,12 @@ body {
   display:block!important
 }
 
-header .navbar {
-  --bs-navbar-color: #1b542c;
-  --bs-navbar-hover-color: #10351b;
-  --bs-navbar-active-color: #1b542c;
+header .nav {
+  --bs-nav-link-color: var(--bs-primary);
+  --bs-nav-link-hover-color: #143f21;
 }
 
-header .navbar .nav-link {
+header .nav-link {
   font-weight: 700;
 }
 
@@ -238,5 +237,8 @@ header .navbar .nav-link {
   }
 }
 
-
+header .nav-pills {
+  --bs-nav-pills-link-active-bg: var(--bs-primary);
+  --bs-nav-pills-link-active-color: #fff;
+}
 
