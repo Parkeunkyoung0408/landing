@@ -1,5 +1,6 @@
 /*!
- * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
+// 라이트 모드로 고정
+document.documentElement.setAttribute('data-bs-theme', 'light');
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under the Creative Commons Attribution 3.0 Unported License.
  */
