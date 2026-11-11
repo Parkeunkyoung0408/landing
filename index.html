@@ -3,19 +3,46 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, 그리고 Bootstrap 기여자들">
-    <meta name="generator" content="Astro v5.13.2">
-    <title>
-      날지켜방
+    <meta name="description" content="검진과 검진 사이, 건강 습관 하나부터. 식사·운동·수면 중 작은 습관을 고르고, 하루 한 번 체크하며 7일의 실천을 돌아보세요.">
+    <meta name="author" content="아두르겸댕">
+        <title>
+      날지켜방 | 건강 습관 하나부터
     </title>
-    <link rel="canonical" href="https://getbootstrap.kr/docs/5.3/examples/carousel/">
+    <link rel="canonical" href="https://parkeunkyoung0408.github.io/landing/">
     <script src="./script.js"></script>
     <link href="./style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap">
     <meta name="theme-color" content="#712cf9">
+
+    <style>
+      .landing-copy { color: #25332a; word-break: keep-all; overflow-wrap: anywhere; }
+      .landing-copy p { line-height: 1.8; }
+      .landing-copy .eyebrow { color: #1b542c; font-weight: 700; letter-spacing: .06em; }
+      .landing-copy .hero-title { font-size: clamp(2rem, 4.4vw, 3.8rem); }
+      .landing-copy .hero-description { max-width: 34rem; font-size: 1.125rem; }
+      .landing-copy .hero-description br { display: none; }
+      .landing-copy .section-title { font-size: clamp(1.6rem, 3vw, 2.25rem); font-weight: 700; line-height: 1.45; color: #1b542c; }
+      .landing-copy .copy-section { padding-top: 4rem; padding-bottom: 4rem; }
+      .landing-copy .preview { max-width: 25rem; margin: auto; padding: 1.5rem; background: #fff; border: 1px solid #dce6dd; border-radius: 1.75rem; box-shadow: 0 1rem 3rem #1b542c12; }
+      .landing-copy .preview-room { width: 100%; height: 160px; object-fit: contain; }
+      .landing-copy .habit-card { padding: 1.25rem; border-radius: 1rem; background: #f0f6ed; }
+      .landing-copy .sample-check { padding: .75rem; background: #1b542c; color: #fff; border-radius: .75rem; text-align: center; font-weight: 700; }
+      .landing-copy .week { display: flex; gap: .35rem; list-style: none; padding: 0; justify-content: space-between; }
+      .landing-copy .week li { flex: 1; text-align: center; padding: .5rem 0; border-radius: .5rem; background: #eef2ed; }
+      .landing-copy .week .done { background: #d5e8ce; color: #1b542c; }
+      .landing-copy .note { font-size: .875rem; color: #536357; }
+      .landing-copy .soft-section { background: #f3f7f0; }
+      .landing-copy .step-title { font-size: 1.3rem; font-weight: 700; color: #1b542c; }
+      .landing-copy .cta-box { border-radius: 1.5rem; background: #f0f6ed; padding: 2.5rem 1.5rem; }
+      .landing-copy a:focus-visible { outline: 3px solid #55814a; outline-offset: 4px; }
+      @media(max-width: 991px) {
+        .landing-copy .hero-description { margin-inline: auto; }
+        .landing-copy .masthead { padding: 3rem 0; margin-bottom: 0; }
+      }
+      @media(prefers-reduced-motion: reduce) { .landing-copy .habit-video { display: none; } }
+    </style>
   </head>
-  <body>
+  <body id="top">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
       <symbol id="check2" viewBox="0 0 16 16">
         <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z">
@@ -50,7 +77,7 @@
 
       <ul class="nav nav-pills">
         <li class="nav-item">
-          <a href="#service" class="nav-link active">서비스 소개</a>
+          <a href="#service" class="nav-link active" aria-current="page">서비스 소개</a>
         </li>
         <li class="nav-item">
           <a href="./brand.html" class="nav-link">브랜드 소개</a>
@@ -60,202 +87,113 @@
   </div>
 
 </header>
-    <main>
-     <header class="masthead">
-            <div class="container px-5">
-                <div class="row gx-5 align-items-center">
-                    <div class="col-lg-6">
-                        <!-- Mashead text and app badges-->
-                        <div class="mb-5 mb-lg-0 text-center text-lg-start">
-                            <h1 class="display-2 hero-title mb-3">검진과 검진 사이,<br>나를 돌보는 일상</h1>
-                            <p class="lead fw-normal text-muted mb-5">건강을 챙기고 싶지만 혼자 꾸준히 실천하기 어려운 당신에게.
-                            <br>날지켜방은 구리와 함께 작은 실천을 이어가는 건강 습관 서비스입니다.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <!-- Masthead device mockup feature-->
-                        <div class="masthead-device-mockup">
-                            <svg class="circle" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="circleGradient" gradientTransform="rotate(45)">
-                                        <stop class="gradient-start-color" offset="0%"></stop>
-                                        <stop class="gradient-end-color" offset="100%"></stop>
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="50"></circle></svg>
-                             ></svg>
-                     <div class="device-wrapper">
-  <div class="device"
-       data-device="iPhoneX"
-       data-orientation="portrait"
-       data-color="black">
 
-    <div class="screen bg-white">
-      <iframe
-        src="https://healthme-nu.vercel.app/"
-        title="날지켜방 서비스 미리보기"
-        class="mobile-site"
-        loading="lazy">
-      </iframe>
-    </div>
-
-  </div>
-</div>
-                        </div>
-                    </div>
+    <main class="landing-copy">
+      <header class="masthead" id="service">
+        <div class="container px-4 px-lg-5">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6 text-center text-lg-start">
+              <p class="eyebrow">검진과 검진 사이</p>
+              <h1 class="hero-title mb-4">나를 돌보는 일상,<br>건강 습관 하나부터</h1>
+              <p class="hero-description mb-4">건강을 챙기고 싶지만, 어디서부터 시작할지 막막하다면.<br>
+                식사·운동·수면 중 지금 할 수 있는 습관 하나를 골라보세요.
+                날지켜방에서 하루 한 번 실천을 체크하고, 7일 동안의 나를 돌아보세요.</p>
+              <a class="btn btn-primary btn-lg px-4" href="#try">먼저 사용해 보기</a>
+              <p class="note mt-3 mb-0">검진 결과 입력 없이 시작해요. 자세한 기록은 원할 때만 남겨요.</p>
+            </div>
+            <div class="col-lg-6">
+              <div class="preview" aria-label="개편 예정인 오늘의 작은 습관 화면 예시">
+                <p class="note mb-2">개편 예정 경험 · 화면 예시</p>
+                <img class="preview-room" src="./images/room.png" alt="아늑한 방에서 함께하는 구리">
+                <h2 class="step-title mt-3">오늘의 작은 습관</h2>
+                <div class="habit-card mt-3">
+                  <p class="note mb-1">내가 고른 운동 습관</p>
+                  <p class="fw-bold mb-3">점심 먹고 10분 걷기</p>
+                  <div class="sample-check">✓ 오늘 실천했어요</div>
                 </div>
+                <p class="fw-bold mt-4 mb-2">7일 중 4일 실천했어요</p>
+                <ul class="week" aria-label="7일 실천 예시: 월, 화, 목, 토 실천">
+                  <li class="done">월 ✓</li><li class="done">화 ✓</li><li>수 —</li>
+                  <li class="done">목 ✓</li><li>금 —</li><li class="done">토 ✓</li><li>일 —</li>
+                </ul>
+                <p class="note mb-0">내가 체크한 실천을 돌아보는 예시예요.</p>
+              </div>
             </div>
-        </header>
-      <!-- Marketing messaging and featurettes
-  ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container marketing">
-        <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-4">
-            <video class="habit-video" autoplay muted loop playsinline>
-            <source src="./images/flower-transparent-v2.webm" type="video/webm">
-            </video>
-              <title>
-                Placeholder
-              </title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-color)">
-              </rect>
-            </svg>
-            <h2 class="text-primary">
-              작게 시작해요
-            </h2>
-            <p>
-              일상에서 할 수 있는 작은 실천부터.<br>나를 돌보는 건강 습관을 시작해보세요.
-            </p>
-            
           </div>
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-                <video class="habit-video guri-video" autoplay muted loop playsinline>
-                <source src="./images/guri-eating-web.webm" type="video/webm">
-              </video>
-              <title>
-                Placeholder
-              </title>
-              <rect width="100%" height="100%" fill="var(--bs-secondary-color)">
-              </rect>
-            </svg>
-            <h2 class="text-primary">
-              즐겁게 함께해요
-            </h2>
-            <p>
-              친근한 캐릭터와 함께 매일의 자기돌봄에<br> 즐거움을 더해보세요.
-            </p>
-          </div>
-          
-          <!-- /.col-lg-4 -->
-          <div class="col-lg-4">
-           <video class="habit-video"
-          autoplay muted loop playsinline
-                  poster="./images/calendar-poster.png"
-                  aria-label="달력에 체크가 하나씩 표시되는 모습">
-              <source src="./images/calendar-icon.webm"
-                      type="video/webm">
-            </video>
-            <h2 class="text-primary">
-              꾸준히 이어가요
-            </h2>
-            <p>
-              검진과 검진 사이에도 나를 챙길 수 있도록.<br>
-              작은 실천을 일상의 습관으로 이어가세요.
-            </p>
-          </div>
-          <!-- 서비스 영상 -->
-          <section id="video" class="service-video">
-            <h2 class="text-primary">소개 영상</h2>
-
-            <div class="ratio ratio-16x9">
-              <iframe
-                src="https://www.youtube.com/embed/aM4dqp5_E2I"
-                title="날지켜방 서비스 영상"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-              </iframe>
-            </div>
-          </section>
-  
-          <!-- /.col-lg-4 -->
         </div>
-        <!-- /.row -->
-        <!-- START THE FEATURETTES -->
-        <hr class="featurette-divider">
-        <div class="row featurette align-items-center">
+      </header>
+
+      <section class="container copy-section text-center" aria-labelledby="how-title">
+        <p class="eyebrow">작은 습관을 이어가는 방법</p>
+        <h2 class="section-title mb-5" id="how-title">하나를 고르고, 하루 한 번.<br>7일 뒤 함께 돌아봐요</h2>
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <video class="habit-video" autoplay muted loop playsinline aria-hidden="true"><source src="./images/flower-transparent-v2.webm" type="video/webm"></video>
+            <h3 class="step-title">1. 습관 하나 고르기</h3>
+            <p>식사·운동·수면 중 하나부터 시작해요.<br>‘한 끼에 채소 곁들이기’처럼<br>오늘 할 수 있는 작은 행동이면 충분해요.</p>
+          </div>
+          <div class="col-lg-4">
+            <video class="habit-video guri-video" autoplay muted loop playsinline aria-hidden="true"><source src="./images/guri-eating-web.webm" type="video/webm"></video>
+            <h3 class="step-title">2. 실천하고 한 번 체크하기</h3>
+            <p>내가 고른 습관을 실천했는지 확인해요.<br>식사·운동·수면의 자세한 기록은<br>더 남기고 싶은 날에만 작성해요.</p>
+          </div>
+          <div class="col-lg-4">
+            <video class="habit-video" autoplay muted loop playsinline aria-hidden="true"><source src="./images/calendar-icon.webm" type="video/webm"></video>
+            <h3 class="step-title">3. 7일의 실천 돌아보기</h3>
+            <p>7일 중 며칠 실천했는지 살펴봐요.<br>체크하지 못한 날이 있어도 괜찮아요.<br>내일 다시 이어가면 되니까요.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="soft-section">
+        <div class="container copy-section">
+          <div class="row g-5 align-items-center">
+            <div class="col-md-6">
+              <img src="./images/room.png" alt="구리가 머무는 아늑한 3D 방" class="img-fluid" loading="lazy">
+            </div>
+            <div class="col-md-6">
+              <p class="eyebrow">구리와 함께하는 작은 실천</p>
+              <h2 class="section-title mb-4">매일 나를 챙기는 시간에<br>구리가 함께해요</h2>
+              <p class="fs-5">구리의 3D 방에 들러 오늘의 습관을 떠올려보세요.
+                참여하며 쌓는 포인트는 작은 보너스예요.
+                가장 먼저 챙길 것은 내가 고른 습관을 일상에서 실천하는 일이에요.</p>
+              <p class="note">포인트와 실천 체크는 참여 기록이며, 건강 상태의 개선을 나타내는 수치는 아니에요.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container copy-section">
+        <div class="row g-5 align-items-center">
           <div class="col-md-7">
-            <h2 class="guri-story-title">
-              구리도, 우리처럼 
-              <span class="guri-story-title">
-              하루를 보내요
-              </span>
-            </h2>
-            <p class="guri-story-description">
-              밥을 먹고, 몸을 움직이고, 잠시 쉬어가는 시간.
-                특별하지 않은 하루 속에서도 나를 챙기는 순간은 있습니다.
-                날지켜방은 구리와 함께 그 평범한 순간을 이야기합니다.
-            </p>
+            <p class="eyebrow">검진과 검진 사이</p>
+            <h2 class="section-title mb-4">다음 검진을 기다리는 동안에도,<br>오늘 나를 돌볼 수 있도록</h2>
+            <p class="fs-5">큰 계획을 세우거나 검진 결과를 입력하지 않아도 괜찮아요.
+              오늘 한 끼, 짧은 산책, 잠들기 전의 작은 행동부터 시작해요.
+              날지켜방은 건강을 챙기고 싶은 마음이 매일의 실천으로 이어지도록 돕고 싶어요.</p>
           </div>
           <div class="col-md-5">
-            <img
-                src="./images/room.png"
-                alt="아늑한 방에서 운동을 준비하는 구리"
-                class="img-fluid d-block mx-auto"
-                loading="lazy">
-            </svg>
+            <img src="./images/plan.png" alt="초록 산책길을 걷는 구리" class="img-fluid" loading="lazy">
           </div>
         </div>
-        <hr class="featurette-divider">
-        <div class="row featurette align-items-center">
-          <div class="col-md-7 order-md-2">
-            <h2  class="guri-story-title">
-              검진은 하루,
-              <span class="guri-story-title">
-              나를 돌보는 일상은 매일.
-              </span>
-            </h2>
-            <p class="guri-story-description">
-              ‘검진과 검진 사이’는 다음 검진을 기다리는 동안에도
-나를 돌보는 일상을 이어가자는 뜻입니다.
-날지켜방은 건강을 생각하는 마음이 작은 실천으로 이어지기를 바랍니다.
-            </p>
-          </div>
-          <div class="col-md-5 order-md-1">
-          <img src="./images/plan.png"
-          alt="초록 산책길을 걷는 구리"
-          class="img-fluid d-block mx-auto"
-          style="width: 80%;"
-          loading="lazy">
-          </div>
-        </div> 
+      </section>
+
+      <section class="container pb-5" id="try" aria-labelledby="try-title">
+        <div class="cta-box text-center">
+          <p class="eyebrow">날지켜방 체험</p>
+          <h2 class="section-title mb-3" id="try-title">오늘, 나를 위한 작은 시작</h2>
+          <p>구리의 방과 기록 기능을 먼저 만나보세요.<br>
+            습관 하나 선택·하루 한 번 체크·7일 요약 경험은 개편을 준비하고 있어요.</p>
+          <a class="btn btn-primary btn-lg px-4" href="https://healthme-nu.vercel.app/" target="_blank" rel="noopener noreferrer" aria-describedby="version-note">먼저 사용해 보기<span class="visually-hidden"> (새 탭)</span></a>
+          <p class="note mt-3 mb-0" id="version-note">현재 체험 버전으로 이동해요. 위 화면 예시와 일부 기능이 다를 수 있어요.</p>
         </div>
-        <hr class="featurette-divider">
-        <!-- /END THE FEATURETTES -->
-      </div>
-      <!-- /.container -->
-      <!-- FOOTER -->
-      <footer class="container">
-        <p class="float-end">
-          <a href="#">
-            Back to top
-          </a>
-        </p>
-        <p>
-          &copy; 2026 아두르겸댕. All rights reserved. &middot;
-          <a href="#">
-            Privacy
-          </a>
-          &middot;
-          <a href="#">
-            Terms
-          </a>
-        </p>
+      </section>
+      <footer class="container py-4">
+        <p class="float-end"><a href="#top">맨 위로</a></p>
+        <p>&copy; 2026 아두르겸댕. All rights reserved.</p>
       </footer>
     </main>
+
   </body>
 </html>
 
