@@ -42,7 +42,7 @@
       progressBar.style.width = `${Math.min(100, (y / maxScroll) * 100)}%`;
     }
 
-    const probe = y + innerHeight * 0.36;
+    const probe = y + header.getBoundingClientRect().bottom + 24;
     const ordered = spySections
       .map((item) => ({ ...item, top: item.el.getBoundingClientRect().top + y }))
       .sort((a, b) => a.top - b.top);
@@ -82,7 +82,7 @@
     document.addEventListener('click', (event) => {
       if (!nav.contains(event.target) && !menuBtn.contains(event.target)) closeMenu();
     });
-    matchMedia('(min-width: 1021px)').addEventListener('change', closeMenu);
+    matchMedia('(min-width: 1101px)').addEventListener('change', closeMenu);
     nav.querySelectorAll('a').forEach((a) => {
       a.addEventListener('click', () => {
         nav.classList.remove('open');
@@ -175,7 +175,7 @@
 
   function setCompareSplit(pct, mode = 'split') {
     if (!photoCompare || !compareRange) return;
-    const clamped = mode === 'rest' ? 100 : mode === 'after' ? 0 : Math.max(4, Math.min(96, Number(pct)));
+    const clamped = mode === 'rest' ? 100 : mode === 'after' ? 0 : Math.max(8, Math.min(92, Number(pct)));
     photoCompare.dataset.view = mode;
     photoCompare.style.setProperty('--split', `${clamped}%`);
     compareRange.hidden = mode !== 'split';
@@ -198,6 +198,11 @@
       });
     });
     setCompareSplit(50);
+    let compareWidth=photoCompare.clientWidth;
+    new ResizeObserver(() => {
+      const width=photoCompare.clientWidth;
+      if(Math.abs(width-compareWidth)>1){compareWidth=width;setCompareSplit(50);}
+    }).observe(photoCompare);
   }
 
   /* ------------------------------------------------------------------------

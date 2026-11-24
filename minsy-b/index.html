@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="journey.css">
   <link rel="stylesheet" href="design-b.css">
+  <link rel="stylesheet" href="figma-page.css?v=nav-states-8">
 </head>
 <body class="design-b" id="top" data-formula="fluoride">
   <div class="page-progress" aria-hidden="true"><span id="page-progress-bar"></span></div>
 
   <header class="site-header" id="site-header">
     <a class="logo" href="#top" aria-label="MINSY home">
-      <img src="assets/logo.png" alt="MINSY">
+      <img src="assets/figma/f0fd1.png" alt="MINSY">
     </a>
 
     <nav id="navigation" aria-label="Primary">
@@ -178,17 +179,17 @@
 
         <div class="floss-states reveal" aria-label="Twisted. Open. Gathered.">
           <article class="floss-state">
-            <div class="floss-state-image state-rest"><img src="assets/floss-3.png" alt="MINSY floss twisted and compact at rest" loading="lazy"></div>
+            <div class="floss-state-image state-rest"><img src="assets/figma/f9bb1.png" alt="MINSY floss twisted and compact at rest" loading="lazy"></div>
             <h3>At Rest</h3>
             <p>Twisted &amp; Compact</p>
           </article>
           <article class="floss-state">
-            <div class="floss-state-image state-open"><img src="assets/floss-5.png" alt="Actual MINSY floss with opened filaments after use" loading="lazy"></div>
+            <div class="floss-state-image state-open"><img src="assets/figma/ef435.png" alt="Actual MINSY floss with opened filaments after use" loading="lazy"></div>
             <h3>In Use</h3>
             <p>Opens Between Teeth</p>
           </article>
           <article class="floss-state">
-            <div class="floss-state-image state-tension"><img src="assets/floss-4.png" alt="MINSY floss gathered under tension" loading="lazy"></div>
+            <div class="floss-state-image state-tension"><img src="assets/figma/606d3.png" alt="MINSY floss gathered under tension" loading="lazy"></div>
             <h3>Under Tension</h3>
             <p>Gathers Back</p>
           </article>
@@ -202,26 +203,22 @@
               <p class="eyebrow">ACTUAL MINSY FLOSS · PHOTO</p>
               <h3>What it looks like <em>after use.</em></h3>
             </div>
-            <div class="compare-mode-pills" role="group" aria-label="Quick compare view">
-              <button type="button" class="mini-pill" data-compare-jump="100">At Rest</button>
-              <button type="button" class="mini-pill is-active" data-compare-jump="50">Split View</button>
-              <button type="button" class="mini-pill" data-compare-jump="0">After Use</button>
-            </div>
+            <span class="compare-instruction">DRAG TO COMPARE</span>
           </div>
 
           <div class="photo-compare" id="photo-compare" data-view="split" style="--split: 50%;">
             <div class="compare-layer layer-after">
-              <img src="assets/floss-1.jpeg" alt="After use actual MINSY floss photo showing opened filaments" loading="lazy">
+              <svg class="compare-photo" viewBox="0 0 1240 994" role="img" aria-label="After use: opened MINSY floss filaments"><image href="assets/figma/ef6b1.png" width="2400" height="994"/></svg>
             </div>
             <div class="compare-layer layer-before">
-              <img src="assets/floss-2.jpeg" alt="At rest actual MINSY floss photo, twisted and compact" loading="lazy">
+              <img src="assets/figma/87afb.png" alt="At rest actual MINSY floss photo, twisted and compact" loading="lazy">
             </div>
-            <span class="compare-tag tag-left">AT REST · TWISTED &amp; COMPACT</span>
-            <span class="compare-tag tag-right">AFTER USE · ACTUAL FLOSS · PHOTO</span>
+            <span class="compare-tag tag-left">AT REST</span>
+            <span class="compare-tag tag-right">AFTER USE</span>
             <div class="compare-divider" aria-hidden="true">
               <span class="compare-knob">↔</span>
             </div>
-            <input type="range" class="compare-range" id="compare-range" min="4" max="96" value="50" aria-label="Drag to compare MINSY floss at rest versus after use">
+            <input type="range" class="compare-range" id="compare-range" min="8" max="92" value="50" aria-label="Drag to compare MINSY floss at rest versus after use">
           </div>
           <p class="caption">Photos of actual floss, cropped and enlarged for detail.</p>
         </div>
@@ -333,7 +330,7 @@
       <div class="container story-grid">
         <div class="story-visual reveal">
           <div class="story-arch">
-            <img id="story-parallax-img" src="assets/floss-5.png" alt="Actual white and orange MINSY expanding floss" loading="lazy">
+            <img id="story-parallax-img" src="assets/figma/ef435.png" alt="Actual white and orange MINSY expanding floss" loading="lazy">
             <span class="story-seal">
               <span>MADE IN ITALY</span>
               <i>·</i>
@@ -446,23 +443,47 @@
           </button>
         </div>
       </div>
-      <div class="end-product-display" role="img" aria-label="MINSY Fluoride and Nano-Hydroxyapatite boxes and matching dispensers">
-        <svg viewBox="0 0 1200 500" aria-hidden="true" focusable="false">
-          <defs><clipPath id="end-pack-mask"><path d="M748 371 L930 301 L1651 419 L1628 1376 L1471 1488 L772 1304 Z"/></clipPath></defs>
-          <svg x="75" y="110" width="325" height="430" viewBox="730 280 940 1240" overflow="visible">
-            <image href="assets/fluoride-0.jpg" width="2400" height="1800" clip-path="url(#end-pack-mask)"/>
-          </svg>
-          <svg x="790" y="135" width="325" height="430" viewBox="730 280 940 1240" overflow="visible">
-            <image href="assets/nhap-0.jpg" width="2400" height="1800" clip-path="url(#end-pack-mask)"/>
-          </svg>
-          <svg x="420" y="25" width="170" height="245" viewBox="90 195 330 395">
-            <image href="assets/container.png" width="1080" height="1000"/>
-          </svg>
-          <svg x="600" y="65" width="170" height="245" viewBox="500 195 330 395">
-            <image href="assets/container.png" width="1080" height="1000"/>
-          </svg>
-        </svg>
-      </div>
+      <div class="end-product-display" aria-label="MINSY boxes opening to reveal matching dispensers"><div class="finale-product fluoride" data-unbox="fluoride"><svg class="finale-fluoride-product-art" viewBox="170 70 400 610" role="img" aria-label="MINSY box opening to reveal its matching floss dispenser">
+                <defs>
+                  <linearGradient id="finale-fluoride-lid-shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--lid-light, #91bdb8)"/><stop offset="1" stop-color="var(--lid-dark, #557e78)"/></linearGradient>
+                  <clipPath id="finale-fluoride-body-mask"><path d="M748 371 L1486 499 L1651 419 L1628 1376 L1471 1488 L772 1304 Z"/></clipPath>
+                  <clipPath id="finale-fluoride-lid-mask"><path d="M748 371 L930 301 L1651 419 L1486 499 Z"/></clipPath>
+                </defs>
+                <ellipse class="finale-ground-shadow" cx="365" cy="664" rx="112" ry="6" fill="#334540" opacity=".045" transform="rotate(3 365 664)"/>
+                <g transform="translate(0 210) scale(.3)">
+                  <path d="M748 371 L930 301 L1651 419 L1486 499 Z" class="finale-fluoride-box-opening" fill="#486761"/>
+                  <g id="finale-fluoride-box-lid">
+                    <image id="finale-fluoride-lid-art" href="assets/fluoride-0.jpg" width="2400" height="1800" clip-path="url(#finale-fluoride-lid-mask)"/>
+                    <path id="finale-fluoride-lid-inside" d="M748 371 L930 301 L1651 419 L1486 499 Z" fill="url(#finale-fluoride-lid-shade)" opacity="0"/>
+                  </g>
+                </g>
+                <svg id="finale-fluoride-dispenser" x="286" y="430" width="178" height="213" viewBox="500 195 330 395" overflow="hidden">
+                  <image href="assets/container.png" width="1080" height="1000"/>
+                </svg>
+                <g transform="translate(0 210) scale(.3)">
+                  <image id="finale-fluoride-box-body" href="assets/fluoride-0.jpg" width="2400" height="1800" clip-path="url(#finale-fluoride-body-mask)"/>
+                </g>
+              </svg></div><div class="finale-product nhap" data-unbox="nhap"><svg class="finale-nhap-product-art" viewBox="170 70 400 610" role="img" aria-label="MINSY box opening to reveal its matching floss dispenser">
+                <defs>
+                  <linearGradient id="finale-nhap-lid-shade" x1="0" y1="0" x2="0" y2="1"><stop stop-color="var(--lid-light, #91bdb8)"/><stop offset="1" stop-color="var(--lid-dark, #557e78)"/></linearGradient>
+                  <clipPath id="finale-nhap-body-mask"><path d="M748 371 L1486 499 L1651 419 L1628 1376 L1471 1488 L772 1304 Z"/></clipPath>
+                  <clipPath id="finale-nhap-lid-mask"><path d="M748 371 L930 301 L1651 419 L1486 499 Z"/></clipPath>
+                </defs>
+                <ellipse class="finale-ground-shadow" cx="365" cy="664" rx="112" ry="6" fill="#334540" opacity=".045" transform="rotate(-3 365 664)"/>
+                <g transform="translate(0 210) scale(.3)">
+                  <path d="M748 371 L930 301 L1651 419 L1486 499 Z" class="finale-nhap-box-opening" fill="#486761"/>
+                  <g id="finale-nhap-box-lid">
+                    <image id="finale-nhap-lid-art" href="assets/nhap-0.jpg" width="2400" height="1800" clip-path="url(#finale-nhap-lid-mask)"/>
+                    <path id="finale-nhap-lid-inside" d="M748 371 L930 301 L1651 419 L1486 499 Z" fill="url(#finale-nhap-lid-shade)" opacity="0"/>
+                  </g>
+                </g>
+                <svg id="finale-nhap-dispenser" x="286" y="430" width="178" height="213" viewBox="90 195 330 395" overflow="hidden">
+                  <image href="assets/container.png" width="1080" height="1000"/>
+                </svg>
+                <g transform="translate(0 210) scale(.3)">
+                  <image id="finale-nhap-box-body" href="assets/nhap-0.jpg" width="2400" height="1800" clip-path="url(#finale-nhap-body-mask)"/>
+                </g>
+              </svg></div></div>
       <svg class="end-wave" viewBox="0 0 1200 24" preserveAspectRatio="none" aria-hidden="true"><path d="M0 12 Q30 0 60 12 T120 12 T180 12 T240 12 T300 12 T360 12 T420 12 T480 12 T540 12 T600 12 T660 12 T720 12 T780 12 T840 12 T900 12 T960 12 T1020 12 T1080 12 T1140 12 T1200 12 V24 H0Z"/></svg>
     </section>
 
@@ -472,7 +493,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <a class="logo" href="#top" aria-label="MINSY home">
-          <img src="assets/logo.png" alt="MINSY">
+          <img src="assets/figma/f0fd1.png" alt="MINSY">
         </a>
         <p class="footer-tagline">MINSY Expanding Floss · Dental-Hygienist-Designed · Made in Italy</p>
       </div>
@@ -502,7 +523,7 @@
     <button type="button" class="pill dark close-dialog">Continue exploring</button>
   </dialog>
 
-  <script src="app.js"></script>
-  <script src="journey.js"></script>
+  <script src="app.js?v=nav-states-8"></script>
+  <script src="journey.js?v=compact-hero-4"></script>
 </body>
 </html>
